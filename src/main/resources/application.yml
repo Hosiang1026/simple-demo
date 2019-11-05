@@ -1,0 +1,31 @@
+server:
+port: 8080
+servlet:
+context-path: /demo
+spring:
+application:
+name: simple-demo
+
+#公共服务-上传文件的路径
+file.uploadPath: D:/usr/local/uploadfile/
+file.uploadUrl: //common/downloadfile/
+
+#测试服务器
+#file.uploadPath: /usr/local/uploadfile/
+#file.uploadUrl: http://vmqnr.zongs365.cc/management/common/downloadfile/
+
+#阿里云服务器
+#file.uploadPath: /vm/
+#file.uploadUrl: http://zongs-file.oss-cn-hangzhou.aliyuncs.com/
+
+#公共服务-上传文件大小限制
+multipart.maxFileSize: 1000Mb
+multipart.maxRequestSize: 1000Mb
+
+oss:
+file:
+endPoint: oss-cn-hangzhou.aliyuncs.com
+keyId:
+accessKeySecret:
+bucketName: upload-file
+fileHost: vm/
