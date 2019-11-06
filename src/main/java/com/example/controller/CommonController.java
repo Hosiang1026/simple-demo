@@ -5,6 +5,7 @@ import com.google.common.collect.Lists;
 import com.example.param.UserParam;
 import com.example.service.CommonService;
 import com.example.utils.DateUtil;
+import com.example.utils.ExportExcelPlusUtil;
 import com.example.utils.ExportExcelUtil;
 import com.example.utils.ImportExcelUtil;
 import com.example.vo.ResultVo;
@@ -80,6 +81,7 @@ public class CommonController {
             String fileName = "User_Data_import_template.xlsx";
             List<VmUser> list = Lists.newArrayList();
             new ExportExcelUtil("User Data", VmUser.class, 1).setDataList(list).write(response, fileName).dispose();
+            //new ExportExcelPlusUtil("User Data", VmUser.class).setSingleData(10).setSubClass(VmUser.class, 1).setDataList(list).write(response, fileName).dispose();
         } catch (IOException e) {
             e.printStackTrace();
         }
